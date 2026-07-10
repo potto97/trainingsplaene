@@ -486,7 +486,7 @@
 <body style="overscroll-behavior-x: auto;">
 
 <!-- Toast -->
-<div class="toast show" id="toast">Abgemeldet</div>
+<div class="toast" id="toast">✓ Übung gespeichert</div>
 
 <!-- Header -->
 <header class="header">
@@ -495,10 +495,10 @@
     <div class="header-sub" id="hd-sub">Athletiktraining</div>
   </div>
   <div class="header-right">
-    <span class="badge badge-trainer" id="badge-trainer" style="display: none;">✏️ Trainer</span>
+    <span class="badge badge-trainer" id="badge-trainer" style="">✏️ Trainer</span>
     <span class="badge badge-notes" id="badge-notes" style="display:none">📝 Notizen</span>
-    <button class="btn btn-ghost btn-sm" id="btn-logout" style="display: none;" onclick="logout()">Abmelden</button>
-    <button class="btn btn-outline btn-sm" id="btn-login" onclick="showPinModal()" style="">Anmelden</button>
+    <button class="btn btn-ghost btn-sm" id="btn-logout" style="" onclick="logout()">Abmelden</button>
+    <button class="btn btn-outline btn-sm" id="btn-login" onclick="showPinModal()" style="display: none;">Anmelden</button>
   </div>
 </header>
 
@@ -510,13 +510,13 @@
     <button class="week-arrow" id="btn-prev" onclick="changeWeek(-1)" disabled="">‹</button>
     <div class="week-label" id="week-label">Woche 1</div>
     <button class="week-arrow" id="btn-next" onclick="changeWeek(1)" disabled="">›</button>
-    <button class="btn btn-outline btn-sm" data-role="trainer" onclick="showWeekModal()" style="gap: 4px; margin-left: 4px; display: none;">
+    <button class="btn btn-outline btn-sm" data-role="trainer" onclick="showWeekModal()" style="gap: 4px; margin-left: 4px; display: flex;">
       ⚙️ <span>Wochen</span>
     </button>
   </div>
 
   <!-- Day tabs -->
-  <div class="day-tabs" id="day-tabs"><button class="day-tab"><span class="day-tab-name">Mo</span><span class="day-tab-count">–</span></button><button class="day-tab filled"><span class="day-tab-name">Di</span><span class="day-tab-count">7 Üb.</span></button><button class="day-tab"><span class="day-tab-name">Mi</span><span class="day-tab-count">–</span></button><button class="day-tab"><span class="day-tab-name">Do</span><span class="day-tab-count">–</span></button><button class="day-tab active filled"><span class="day-tab-name">Fr</span><span class="day-tab-count">1 Üb.</span></button><button class="day-tab"><span class="day-tab-name">Sa</span><span class="day-tab-count">–</span></button><button class="day-tab"><span class="day-tab-name">So</span><span class="day-tab-count">–</span></button></div>
+  <div class="day-tabs" id="day-tabs"><button class="day-tab"><span class="day-tab-name">Mo</span><span class="day-tab-count">–</span></button><button class="day-tab"><span class="day-tab-name">Di</span><span class="day-tab-count">–</span></button><button class="day-tab"><span class="day-tab-name">Mi</span><span class="day-tab-count">–</span></button><button class="day-tab"><span class="day-tab-name">Do</span><span class="day-tab-count">–</span></button><button class="day-tab active filled"><span class="day-tab-name">Fr</span><span class="day-tab-count">5 Üb.</span></button><button class="day-tab"><span class="day-tab-name">Sa</span><span class="day-tab-count">–</span></button><button class="day-tab"><span class="day-tab-name">So</span><span class="day-tab-count">–</span></button></div>
 
   <!-- Exercise list -->
   <div class="exercise-list" id="ex-list"><div class="ex-card">
@@ -525,17 +525,53 @@
         <div class="ex-name">Tempo Squats</div>
         
       </div>
-      <div class="ex-pills"><div class="pill pill-sets"><span class="pill-lbl">📋 Sätze</span><span class="pill-val">3</span></div><div class="pill pill-reps"><span class="pill-lbl">🔁 Wdh.</span><span class="pill-val">6-8</span></div><div class="pill pill-pause"><span class="pill-lbl">⏱️ Pause</span><span class="pill-val">120-180 Sek</span></div><div class="pill pill-tempo"><span class="pill-lbl">⚡ Tempo</span><span class="pill-val">0-3-X-0</span></div><div class="pill pill-intensity"><span class="pill-lbl">🎯 Intensität</span><span class="pill-val">RPE 8</span></div></div>
+      <div class="ex-pills"><div class="pill pill-sets"><span class="pill-lbl">📋 Sätze</span><span class="pill-val">3</span></div><div class="pill pill-reps"><span class="pill-lbl">🔁 Wdh.</span><span class="pill-val">6-8</span></div><div class="pill pill-pause"><span class="pill-lbl">⏱️ Pause</span><span class="pill-val">120 Sek</span></div><div class="pill pill-tempo"><span class="pill-lbl">⚡ Tempo</span><span class="pill-val">0-3-X-0</span></div><div class="pill pill-intensity"><span class="pill-lbl">🎯 Intensität</span><span class="pill-val">70% der Testung (aus Tabelle ablesen)</span></div></div>
       
+      
+      <div class="ex-bottom"></div></div><div class="ex-card">
+      <div class="ex-head">
+        <div class="ex-num">2</div>
+        <div class="ex-name">Camporini RDLs</div>
+        
+      </div>
+      <div class="ex-pills"><div class="pill pill-sets"><span class="pill-lbl">📋 Sätze</span><span class="pill-val">1</span></div><div class="pill pill-reps"><span class="pill-lbl">🔁 Wdh.</span><span class="pill-val">8-10/Seite</span></div><div class="pill pill-pause"><span class="pill-lbl">⏱️ Pause</span><span class="pill-val">90-120 Sek</span></div><div class="pill pill-intensity"><span class="pill-lbl">🎯 Intensität</span><span class="pill-val">RPE 8</span></div></div>
+      <div class="ex-video"><a href="https://www.instagram.com/p/DV1QzIICjmP/" target="_blank" rel="noopener" class="video-btn"><span class="video-btn-icon">▶</span> Video ansehen</a></div>
+      
+      <div class="ex-bottom"></div></div><div class="ex-card">
+      <div class="ex-head">
+        <div class="ex-num">3</div>
+        <div class="ex-name">Klimmzüge/Australian Pull Ups</div>
+        
+      </div>
+      <div class="ex-pills"><div class="pill pill-sets"><span class="pill-lbl">📋 Sätze</span><span class="pill-val">3</span></div><div class="pill pill-reps"><span class="pill-lbl">🔁 Wdh.</span><span class="pill-val">8-10</span></div><div class="pill pill-pause"><span class="pill-lbl">⏱️ Pause</span><span class="pill-val">90 Sek</span></div><div class="pill pill-intensity"><span class="pill-lbl">🎯 Intensität</span><span class="pill-val">RPE 9-10</span></div></div>
+      
+      
+      <div class="ex-bottom"></div></div><div class="ex-card">
+      <div class="ex-head">
+        <div class="ex-num">4</div>
+        <div class="ex-name">Impulse Core Rotations</div>
+        
+      </div>
+      <div class="ex-pills"><div class="pill pill-sets"><span class="pill-lbl">📋 Sätze</span><span class="pill-val">3</span></div><div class="pill pill-reps"><span class="pill-lbl">🔁 Wdh.</span><span class="pill-val">10 Sekunden</span></div><div class="pill pill-pause"><span class="pill-lbl">⏱️ Pause</span><span class="pill-val">90 Sek</span></div><div class="pill pill-intensity"><span class="pill-lbl">🎯 Intensität</span><span class="pill-val">RPE 9</span></div></div>
+      <div class="ex-video"><a href="https://www.instagram.com/p/DYkMQvtNtPW/" target="_blank" rel="noopener" class="video-btn"><span class="video-btn-icon">▶</span> Video ansehen</a></div>
       
         <div class="ex-notes">
           <div class="notes-lbl">📝 Notiz</div>
-          <div class="notes-text">Die Angabe beim Tempo beschreibt, dass du keine Vorgabe für den exzentrischen Teil der Bewegung hast, unten dann 3 Sekunden halten, dann maximal schnell wieder hoch kommen sollst und keine Vorgabe für das Halten in der oberen Position hast.</div>
+          <div class="notes-text">1. Übung aus dem Video</div>
         </div>
+      <div class="ex-bottom"></div></div><div class="ex-card">
+      <div class="ex-head">
+        <div class="ex-num">5</div>
+        <div class="ex-name">Med Ball Rotational Throw</div>
+        
+      </div>
+      <div class="ex-pills"><div class="pill pill-sets"><span class="pill-lbl">📋 Sätze</span><span class="pill-val">4</span></div><div class="pill pill-reps"><span class="pill-lbl">🔁 Wdh.</span><span class="pill-val">6</span></div><div class="pill pill-pause"><span class="pill-lbl">⏱️ Pause</span><span class="pill-val">120 Sek</span></div><div class="pill pill-intensity"><span class="pill-lbl">🎯 Intensität</span><span class="pill-val">RPE 10</span></div></div>
+      <div class="ex-video"><a href="https://www.youtube.com/watch?v=5MUU5M0eJlk&amp;feature=youtu.be" target="_blank" rel="noopener" class="video-btn"><span class="video-btn-icon">▶</span> Video ansehen</a></div>
+      
       <div class="ex-bottom"></div></div></div>
 
   <!-- Add exercise (trainer only) -->
-  <div id="wrap-add" style="display: none; margin-top: 0px;">
+  <div id="wrap-add" style="display: block; margin-top: 0px;">
     <button class="add-btn" onclick="showExModal(null)">＋ Übung hinzufügen</button>
   </div>
 
@@ -576,11 +612,11 @@
 <div class="overlay" id="modal-ex" style="display: none;" onclick="overlayClose('modal-ex',event)">
   <div class="modal modal-lg" onclick="event.stopPropagation()">
     <div class="modal-head">
-      <div class="modal-title" id="ex-modal-title">Übung bearbeiten</div>
+      <div class="modal-title" id="ex-modal-title">Übung hinzufügen</div>
       <button class="btn btn-ghost btn-icon" onclick="hide('modal-ex')">✕</button>
     </div>
     <div class="modal-body">
-      <input type="hidden" id="ex-edit-id" value="ex_1782730888078">
+      <input type="hidden" id="ex-edit-id" value="">
 
       <div class="form-group">
         <label class="form-label">Name der Übung *</label>
@@ -624,7 +660,7 @@
 
       <div class="form-actions">
         <div class="form-actions-left">
-          <button class="btn btn-danger btn-sm" id="btn-delete-ex" onclick="deleteExercise()" style="">🗑 Löschen</button>
+          <button class="btn btn-danger btn-sm" id="btn-delete-ex" onclick="deleteExercise()" style="display: none;">🗑 Löschen</button>
         </div>
         <button class="btn btn-outline" onclick="hide('modal-ex')">Abbrechen</button>
         <button class="btn btn-primary" onclick="saveExercise()">Speichern</button>
@@ -692,85 +728,7 @@
       "name": "Woche 1",
       "days": {
         "Mo": [],
-        "Di": [
-          {
-            "name": "Moderate Hurdle Leaps",
-            "sets": "4",
-            "reps": "6",
-            "pause": "90 Sek",
-            "tempo": "",
-            "intensity": "RPE 10",
-            "videoLink": "https://exrx.net/Plyometrics/HurdleJumps",
-            "notes": "",
-            "id": "ex_1783358864951"
-          },
-          {
-            "name": "Sprints",
-            "sets": "",
-            "reps": "",
-            "pause": "",
-            "tempo": "",
-            "intensity": "",
-            "videoLink": "",
-            "notes": "2x20m\n1x30m (curved)",
-            "id": "ex_1783358892349"
-          },
-          {
-            "name": "Tempo Squats",
-            "sets": "4",
-            "reps": "6-8",
-            "pause": "120 Sek",
-            "tempo": "0-3-0-X",
-            "intensity": "",
-            "videoLink": "",
-            "notes": "",
-            "id": "ex_1783358922949"
-          },
-          {
-            "name": "Lateral Lunges",
-            "sets": "2",
-            "reps": "8",
-            "pause": "90 Sek",
-            "tempo": "",
-            "intensity": "RPE 8",
-            "videoLink": "",
-            "notes": "",
-            "id": "ex_1783358939432"
-          },
-          {
-            "name": "Rudern",
-            "sets": "3",
-            "reps": "10",
-            "pause": "120 Sek",
-            "tempo": "",
-            "intensity": "RPE 9-10",
-            "videoLink": "",
-            "notes": "",
-            "id": "ex_1783358972081"
-          },
-          {
-            "name": "Core Rotation mit Nackenstütze",
-            "sets": "3",
-            "reps": "6-8/Seite",
-            "pause": "90 Sek",
-            "tempo": "",
-            "intensity": "",
-            "videoLink": "https://www.instagram.com/p/DOx9dJyDXIc/",
-            "notes": "",
-            "id": "ex_1783359043431"
-          },
-          {
-            "name": "Med Ball Throws",
-            "sets": "4",
-            "reps": "6",
-            "pause": "90-120 Sek",
-            "tempo": "",
-            "intensity": "RPE 10",
-            "videoLink": "",
-            "notes": "",
-            "id": "ex_1783359063396"
-          }
-        ],
+        "Di": [],
         "Mi": [],
         "Do": [],
         "Fr": [
@@ -778,12 +736,56 @@
             "name": "Tempo Squats",
             "sets": "3",
             "reps": "6-8",
-            "pause": "120-180 Sek",
+            "pause": "120 Sek",
             "tempo": "0-3-X-0",
-            "intensity": "RPE 8",
+            "intensity": "70% der Testung (aus Tabelle ablesen)",
             "videoLink": "",
-            "notes": "Die Angabe beim Tempo beschreibt, dass du keine Vorgabe für den exzentrischen Teil der Bewegung hast, unten dann 3 Sekunden halten, dann maximal schnell wieder hoch kommen sollst und keine Vorgabe für das Halten in der oberen Position hast.",
-            "id": "ex_1782730888078"
+            "notes": "",
+            "id": "ex_1783695289295"
+          },
+          {
+            "name": "Camporini RDLs",
+            "sets": "1",
+            "reps": "8-10/Seite",
+            "pause": "90-120 Sek",
+            "tempo": "",
+            "intensity": "RPE 8",
+            "videoLink": "https://www.instagram.com/p/DV1QzIICjmP/",
+            "notes": "",
+            "id": "ex_1783695324794"
+          },
+          {
+            "name": "Klimmzüge/Australian Pull Ups",
+            "sets": "3",
+            "reps": "8-10",
+            "pause": "90 Sek",
+            "tempo": "",
+            "intensity": "RPE 9-10",
+            "videoLink": "",
+            "notes": "",
+            "id": "ex_1783695388160"
+          },
+          {
+            "name": "Impulse Core Rotations",
+            "sets": "3",
+            "reps": "10 Sekunden",
+            "pause": "90 Sek",
+            "tempo": "",
+            "intensity": "RPE 9",
+            "videoLink": "https://www.instagram.com/p/DYkMQvtNtPW/",
+            "notes": "1. Übung aus dem Video",
+            "id": "ex_1783695429359"
+          },
+          {
+            "name": "Med Ball Rotational Throw",
+            "sets": "4",
+            "reps": "6",
+            "pause": "120 Sek",
+            "tempo": "",
+            "intensity": "RPE 10",
+            "videoLink": "https://www.youtube.com/watch?v=5MUU5M0eJlk&feature=youtu.be",
+            "notes": "",
+            "id": "ex_1783695471257"
           }
         ],
         "Sa": [],
@@ -908,9 +910,20 @@ function renderDayTabs() {
     const btn = document.createElement('button');
     btn.className = 'day-tab' + (d === activeDay ? ' active' : '') + (count > 0 ? ' filled' : '');
     btn.innerHTML = `<span class="day-tab-name">${d}</span><span class="day-tab-count">${count ? count + ' Üb.' : '–'}</span>`;
-    const switchDay = (e) => { e.preventDefault(); activeDay = d; renderDayTabs(); renderExercises(); };
-    btn.addEventListener('click', switchDay);
-    btn.addEventListener('touchend', switchDay);
+    let tapped = false;
+    btn.addEventListener('touchend', (e) => {
+      e.preventDefault();
+      tapped = true;
+      activeDay = d;
+      renderDayTabs();
+      renderExercises();
+    });
+    btn.addEventListener('click', () => {
+      if (tapped) { tapped = false; return; }
+      activeDay = d;
+      renderDayTabs();
+      renderExercises();
+    });
     wrap.appendChild(btn);
   });
 }
@@ -1005,7 +1018,7 @@ function updateNote(id, val) {
 function showExModal(id) {
   const isEdit = !!id;
   document.getElementById('ex-modal-title').textContent = isEdit ? 'Übung bearbeiten' : 'Übung hinzufügen';
-  document.getElementById('btn-delete-ex').style.display = isEdit ? '' : 'none';
+  document.getElementById('btn-delete-ex').style.display = (isEdit && mode === 'trainer') ? 'inline-flex' : 'none';
   document.getElementById('ex-edit-id').value = id || '';
 
   const fields = ['name','sets','reps','pause','tempo','intensity','video','notes'];
